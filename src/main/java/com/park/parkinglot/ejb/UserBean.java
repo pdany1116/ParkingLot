@@ -27,7 +27,14 @@ public class UserBean {
     private EntityManager em;
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
-    
+    public void CreateUser(String userame, String email, String passwordSha256, String position) {
+        User user = new User();
+        user.setUsername(userame);
+        user.setEmail(email);
+        user.setPassword(passwordSha256);
+        user.setPosition(position);
+        em.persist(user);
+    }
     public List<UserDetails> getAllUsers() {
         LOG.info("getAllUsers");
         try {

@@ -2,7 +2,7 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <t:pageTemplate pageTitle = "EditCar">
-    <form class="needs-validation" novalidate method="POST" action="${pageContext.request.contextPath}/EditCar">
+    <form class="needs-validation" novalidate method="POST" action="${pageContext.request.contextPath}/Cars/Update">
         <div class="col-md-6 mb-3">
             <label for="licensePlate">License Plate</label>
             <input type="text" class="form-control" id="license_plate" name="license_plate" placeholder="" value="${car.licensePlate}" required>

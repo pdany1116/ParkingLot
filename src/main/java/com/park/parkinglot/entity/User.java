@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author Dani
  */
 @Entity
-@Table(name = "USERS")
+@Table(name = "Users")
 @XmlRootElement
 public class User implements Serializable {
 

@@ -10,17 +10,23 @@
         <button class="btn btn-danger" type="submit">Delete Cars</button>
         <c:forEach var = "car" items = "${cars}" varStatus = "status">
             <div class = "row">
-                <div class="col-md-2">
+                <div class="col-md-1">
                     <input type="checkbox" name="car_ids" value="${car.id}" />
                 </div>    
-                <div class ="col-md-2">
+                <div class ="col-md-1">
                     ${car.licensePlate}
                 </div>
-                <div class ="col-md-2">
+                <div class ="col-md-1">
                     ${car.parkingSpot}
                 </div>
-                <div class ="col-md-2">
+                <div class ="col-md-1">
                     ${car.username}
+                </div>
+                <div class ="col-md-2">
+                    <img src="${pageContext.request.contextPath}/Cars/Photos?id=${car.id}" width="48" />
+                </div>
+                <div class ="col-md-2">
+                    <a class="btn btn-secondary" href ="${pageContext.request.contextPath}/Cars/AddPhoto?id=${car.id}" role="button">Add Photo</a>
                 </div>
                 <div class ="col-md-2">
                     <a class="btn btn-secondary" href ="${pageContext.request.contextPath}/Cars/Update?id=${car.id}" role="button">Edit Car</a>
